@@ -20,7 +20,7 @@ export async function getAll () {
  }
 //getByName("de la Independencia")
 
-async function getById(id:number) {
+export async function getById(id:number) {
    const allData = await getAll()
    const museumId = allData.find((el) => el.id == id)
    return museumId
@@ -28,3 +28,13 @@ async function getById(id:number) {
    
 }
 //getById(51)
+
+export async function getDescription(nameDescription:string) {
+   const getName = await getByName(nameDescription)
+   const description = getName[0].descripcion
+   return description
+   
+
+   }
+   
+//getDescription("Ricardo")

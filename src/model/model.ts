@@ -6,12 +6,12 @@ export async function getAll () {
     return dataEntera
  }
  
- export async function getByCity (ciudad: string) {
+ export async function getByProvince (province: string) {
      const data = await getAll()
-     const dataFiltrada = data.filter((el) => el.direccion.includes(ciudad))
+     const dataFiltrada = data.filter((el) => el.direccion.includes(province))
      return dataFiltrada
     }
-//  getByCity("Córdoba")
+//  getByProvince("Córdoba")
 
  export async function getByName (nombre: string) {
     const allData = await getAll()

@@ -8,14 +8,14 @@ export async function getAll () {
  
  export async function getByProvince (province: string) {
      const data = await getAll()
-     const dataFiltrada = data.filter((el) => el.direccion.includes(province))
+     const dataFiltrada = data.filter((el) => el.direccion.toLowerCase().includes(province.toLowerCase()))
      return dataFiltrada
     }
 //  getByProvince("Córdoba")
 
  export async function getByName (nombre: string) {
     const allData = await getAll()
-    const dataName = allData.filter((el) => el.nombre.includes(nombre))
+    const dataName = allData.filter((el) => el.nombre.toLowerCase().includes(nombre.toLowerCase()))
     return dataName
  }
 //getByName("de la Independencia")

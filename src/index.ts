@@ -1,12 +1,14 @@
 import { PORT } from "./constants"
+import { endPoints } from "./app";
 
 const net = require("net");
 
 const server = net.createServer();
 
 server.on("connection", (socket) => {
-    socket.write("Bienvenido a mi servidor");
-    socket.on("data", () => {
+    socket.on("data", async (mensaje) => {
+        const entradaALosEP = await endPoints(mensaje)
+        socket.write(entradaALosEP)
         
     } )
 })

@@ -4,6 +4,7 @@ export async function getAll () {
     const data = await getData()
     const dataEntera = data.results
     return dataEntera
+
  }
  
  export async function getByProvince (province: string) {
@@ -11,14 +12,14 @@ export async function getAll () {
      const dataFiltrada = data.filter((el) => el.direccion.toLowerCase().includes(province.toLowerCase()))
      return dataFiltrada
     }
-//  getByProvince("Córdoba")
+
 
  export async function getByName (nombre: string) {
     const allData = await getAll()
     const dataName = allData.filter((el) => el.nombre.toLowerCase().includes(nombre.toLowerCase()))
     return dataName
  }
-//getByName("de la Independencia")
+
 
 export async function getById(id:number) {
    const allData = await getAll()
@@ -27,7 +28,7 @@ export async function getById(id:number) {
    
    
 }
-//getById(51)
+
 
 export async function getDescription(nameDescription:string) {
    const getName = await getByName(nameDescription)
@@ -37,4 +38,4 @@ export async function getDescription(nameDescription:string) {
 
    }
    
-//getDescription("Ricardo")
+

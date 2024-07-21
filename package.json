@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "controller": "ts-node ./src/index.ts",
+    "server": "ts-node ./src/index.ts",
     "client": "ts-node ./src/client.ts",
     "constants": "ts-node ./src/constants.ts",
-    "model": "ts-node ./src/model/model.ts"
+    "model": "ts-node ./src/model/model.ts",
+    "controller": "ts-node ./src/controller/controller.ts"
   },
   "keywords": [],
   "author": "",

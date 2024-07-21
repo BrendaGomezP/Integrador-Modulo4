@@ -11,9 +11,13 @@ export async function provinceMuseum(province: string) {
     } else if (typeof province != "string") {
         return Messages.BAD_REQUEST
     }
-    return await getByProvince(province)
+    //return await getByProvince(province)
+    const queTrae = await getByProvince(province)
+    console.log(queTrae);
+        
 
 }
+provinceMuseum("entre rios")
 
 export async function idMuseum(id: number) {
     if (!id){

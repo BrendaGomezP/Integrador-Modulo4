@@ -25,7 +25,7 @@ export async function endPoints(mensaje) {
         const province = await provinceMuseum(objetoJs.province);
         const provinceJson = JSON.stringify(province);
         return provinceJson;
-    } else if (objetoJs.path == "descripcion") {
+    } else if (objetoJs.path == "description") {
         const description = await descriptionMuseum(objetoJs.nameForDesc);
         const descriptionJson = JSON.stringify(description);
         return descriptionJson;

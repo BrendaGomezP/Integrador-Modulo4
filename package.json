@@ -8,7 +8,8 @@
     "client": "ts-node ./src/client.ts",
     "constants": "ts-node ./src/constants.ts",
     "model": "ts-node ./src/model/model.ts",
-    "controller": "ts-node ./src/controller/controller.ts"
+    "controller": "ts-node ./src/controller/controller.ts",
+    "compile": "tsc"
   },
   "keywords": [],
   "author": "",
